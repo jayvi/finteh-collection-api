@@ -20,7 +20,8 @@ npm run dev
 {{URL}}/api/v1/create
 
 ```
-Header : Application/json
+Header 
+Content-Type: Application/json
 ```
 ```
 Params : 
