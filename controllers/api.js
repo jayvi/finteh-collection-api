@@ -20,6 +20,13 @@ exports.getSingleUser = (req, res, next) => {
         msg: 'Single User',
     });
 };
+exports.pingAction = (req, res, next) => {
+    res.status(200).json({
+        success: true,
+        msg: 'PONG',
+    });
+};
+
 
 // @desc    delete user
 // @route   DELERTE/api/v1/:id
