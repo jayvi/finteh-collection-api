@@ -2,6 +2,19 @@ const mongoose = require('mongoose')
 const moment = require('moment');
 const UserSchema = new mongoose.Schema({
   
+    fname: {
+        type: String,
+        // required: [false, 'Add name pls'],
+        trim: true,
+        maxlength: [15, '15 chars reached for name']
+    },
+
+    lname: {
+        type: String,
+        // required: [false, 'Add name pls'],
+        trim: true,
+        maxlength: [15, '15 chars reached for name']
+    },
     name: {
         type: String,
         // required: [false, 'Add name pls'],
