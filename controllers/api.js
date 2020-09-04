@@ -7,7 +7,7 @@ const ErrorResponse = require('../utils/errorResponse')
 exports.getAll = (req, res, next) => {
     res.status(200).json({
         success: true,
-        msg: 'Get User Asss',
+        msg: '(.)!(.)',
     });
 };
 
@@ -31,12 +31,12 @@ exports.pingAction = (req, res, next) => {
 // @desc    delete user
 // @route   DELERTE/api/v1/:id
 // @access  Private
-exports.deleteUser = (req, res, next) => {
-    res.status(200).json({
-        success: true,
-        msg: 'Delete User',
-    });
-};
+// exports.deleteUser = (req, res, next) => {
+//     res.status(200).json({
+//         success: true,
+//         msg: 'Delete User',
+//     });
+// };
 
 // @desc    Create User
 // @route   POST /api/v1/user/create

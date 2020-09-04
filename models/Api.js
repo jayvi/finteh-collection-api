@@ -17,6 +17,7 @@ const UserSchema = new mongoose.Schema({
     phone: {
         type: String,
         required: [false, 'Add phone pls'],
+        trim: true,
     },
     email: {
         type: String,
