@@ -43,6 +43,21 @@ exports.pingAction = (req, res, next) => {
 // @access  Private
 exports.createUser = asyncHandler(async (req, res, next) => {
     console.log(req.body)
+    
+    console.log(req.body)
+    const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const browser = req.headers['user-agent'];
+    req.body.browser = browser || 'unknown';
+    req.body.ip = ip;
+    if(req.body.company === '1'){
+    req.body.company = 'spudo';
+    }else{
+    req.body.company = 'vedino';
+    }
+    
+    console.log(req.body)
+    
+    
     const newUser = await ApiModel.create(req.body);
     res.status(201).json({
         success: true,
