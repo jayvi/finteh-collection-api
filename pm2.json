@@ -1,0 +1,30 @@
+{
+  "apps": [
+    {
+      "exec_mode": "fork_mode",
+      "script": "./server.js",
+      "name": "proj-0",
+      "node_args": [ "--harmony" ],
+      "env": {
+        "PORT": 5001,
+        "NODE_ENV": "development"
+      },
+      "error_file": "/var/www/logs/proj-0.err.log",
+      "out_file": "/var/www/logs/proj-0.out.log"
+    },
+    {
+      "exec_mode": "fork_mode",
+      "script": "./server.js",
+      "name": "proj-1",
+      "node_args": [ "--harmony" ],
+      "env": {
+        "PORT": 5002,
+        "NODE_ENV": "development"
+      },
+      "error_file": "/var/www/logs/proj-1.err.log",
+      "out_file": "/var/www/logs/proj-1.out.log"
+    }
+  ]
+}
+
+

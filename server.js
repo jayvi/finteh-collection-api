@@ -26,8 +26,9 @@ const app = express();
 
 //Body parser
 app.use(express.json());
-// for parsing application/xwww-
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+
 
 //Sanitize Data
 app.use(mongoSanitize());

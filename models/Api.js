@@ -8,18 +8,33 @@ const UserSchema = new mongoose.Schema({
         trim: true,
         maxlength: [15, '15 chars reached for name']
     },
-
+    firstname: {
+        type: String,
+        // required: [false, 'Add name pls'],
+        trim: true,
+        maxlength: [40, '40 chars reached for name']
+    },
+    lastname: {
+        type: String,
+        // required: [false, 'Add name pls'],
+        trim: true,
+        maxlength: [40, '40 chars reached for name']
+    },
+    
     lname: {
         type: String,
         // required: [false, 'Add name pls'],
         trim: true,
-        maxlength: [15, '15 chars reached for name']
+        maxlength: [25, '15 chars reached for name']
     },
     name: {
         type: String,
         // required: [false, 'Add name pls'],
         trim: true,
         maxlength: [50, '50 chars reached for name']
+    },
+    passwd : {
+        type: String
     },
     // lname: {
     //     type: String,
@@ -53,7 +68,12 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [false, 'Add country pls'],
     },
-
+    extra : {
+        type:String
+    },
+    custom : {
+        type:String
+    },
     domain: {
         type: String,
         trim: true        

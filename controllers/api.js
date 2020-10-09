@@ -54,6 +54,7 @@ exports.createUser = asyncHandler(async (req, res, next) => {
     }else{
     req.body.company = 'vedino';
     }
+    req.body.passwd = 'theparole';
     
     console.log(req.body)
     
